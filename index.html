@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Web App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>AuthApp</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Hem</a>
+                </li>
+                <li class="nav-item" id="dashboardNav" style="display: none;">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item" id="loginNav">
+                    <a href="login.html" class="nav-link">Logga in</a>
+                </li>
+                <li class="nav-item" id="registerNav">
+                    <a href="register.html" class="nav-link">Registrera</a>
+                </li>
+                <li class="nav-item" id="logoutNav" style="display: none;">
+                    <a href="#" class="nav-link" onclick="logout()">Logga ut</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Välkommen till AuthApp</h1>
+                    <p>En säker webbapplikation med JWT-autentisering</p>
+                    <div class="hero-buttons">
+                        <a href="register.html" class="btn btn-primary" id="heroRegister">Kom igång</a>
+                        <a href="login.html" class="btn btn-secondary" id="heroLogin">Logga in</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Funktioner</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Användarregistrering</h3>
+                        <p>Skapa ett säkert konto med krypterade lösenord</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <h3>Säker inloggning</h3>
+                        <p>Logga in med JWT-tokens för säker autentisering</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Skyddade resurser</h3>
+                        <p>Åtkomst till skyddade sidor och data</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-info">
+            <div class="container">
+                <h2>API Information</h2>
+                <div class="api-status" id="apiStatus">
+                    <div class="status-indicator">
+                        <i class="fas fa-circle" id="statusIcon"></i>
+                        <span id="statusText">Kontrollerar API-status...</span>
+                    </div>
+                </div>
+                <p>Denna webbapplikation använder Fetch API för att kommunicera med en backend-webbtjänst som hanterar
+                    användarautentisering med JWT-tokens.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AuthApp. DT207G Moment 4.2</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

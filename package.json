@@ -1,0 +1,21 @@
+{
+    "name": "auth-webapp",
+    "version": "1.0.0",
+    "description": "Web application that consumes authentication web service",
+    "main": "index.html",
+    "scripts": {
+        "dev": "live-server --port=8080 --open=/index.html",
+        "start": "npm run dev"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    },
+    "keywords": [
+        "authentication",
+        "webapp",
+        "jwt",
+        "fetch-api"
+    ],
+    "author": "",
+    "license": "MIT"
+}
